@@ -1,0 +1,33 @@
+# Git Commands – Distributed Version Control System
+
+## Saving Changes
+- **`git add <path>`**: Stage the specified file for commit.
+- **`git add .`**: Stage all modified and new files in the current directory and its subdirectories.
+- **`git commit`**: Save staged changes to your local repository.
+
+## Working with Branches
+- **`git branch -a`**: List all local and remote branches.
+- **`git branch <branch_name>`**: Create a new branch called `<branch_name>`.
+- **`git checkout <branch_name>`**: Switch to the specified branch.
+
+## Merging Branches
+- To merge a feature branch into `master`:
+  1. Checkout the `master` branch:
+     `git checkout master`
+  2. Merge the feature branch:
+     `git merge <feature_branch>`
+- If the `master` branch has new commits after the feature branch was created, merging will generate a new commit.
+- Merge conflicts are marked in the code using `<<<<<<< HEAD`, `=======`, and `>>>>>>> <branch>`. Resolve these conflicts manually and commit the changes.
+
+## Rebase vs. Merge
+- **`git rebase`**: Use rebase to maintain a linear commit history and avoid overlapping merge commits.
+- **`git pull --rebase`**: Equivalent to running `git fetch origin`, then rebasing your local branch onto `master`, followed by merging.
+- Rebasing rewrites commit history, so it’s best used when collaborating closely or before pushing to a shared branch.
+
+## Stashing Changes
+- **`git stash`**: Temporarily saves (stashes) your local changes, allowing you to switch branches or update your working directory without committing unfinished work.
+- **`git stash pop`**: Reapplies your stashed changes to your working directory.
+
+## Useful Links
+- [Your GitHub Profile](https://github.com/bharadw)
+
