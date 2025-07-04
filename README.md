@@ -1,1 +1,1 @@
-All the learning related docs
+All the docs need to be stored in this repository 
