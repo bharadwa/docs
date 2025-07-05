@@ -1,0 +1,14 @@
+how the apis should be names
+//REST stands for representational state transfer,
+and it is an architectural style for designing networked applications.
+All the api's should be structured around the resources in which they operate.
+The type of action the api performs should't the part of the apis
+example : /vedios/create is wrong
+The type of action should be the part of the http method ,it shouldn't be the part of the api
+different http methods are
+GET --fetching a resource from the server
+PUT --updating a resource on the server (completely updating the entire resource )
+POST -- creating a new resource on the server
+PATCH -- updating a resource partially on the server
+DELETE -- deleting a resource from the server
+no api shouldnt main any data from the previous api and it is called stateless
