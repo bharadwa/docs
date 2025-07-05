@@ -1,0 +1,10 @@
+File > Project Structure (or press Ctrl+Alt+Shift+S).
+// This will open the Project Structure dialog where you can manage modules, libraries, and SDKs.
+// File > Settings (or press Ctrl+Alt+S).
+// This will open the Settings dialog where you can configure various IDE settings.
+// File > New > Project (or press Ctrl+Shift+N).
+// This will open the New Project dialog where you can create a new project.
+// File > Open (or press Ctrl+shit +N).
+// This will open a file dialog to open an existing file.
+// File > Close Project (or press Ctrl+Shift+F4).
+// This will close the current project.
