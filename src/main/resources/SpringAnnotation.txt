@@ -1,0 +1,10 @@
+@RestControllers // This annotation is used to define a class as a REST controller in Spring.
+@Service // This annotation is used to define a class as a service in Spring. this may be used for exceptional transalation
+@Component // This annotation is used to define a class as a Spring component, which can be used for dependency injection.
+@Repository // This annotation is used to define a class as a repository in Spring, typically for data access.
+@Configuration // This annotation is used to define a class as a configuration class in Spring, which can contain bean definitions.
+@Bean // This annotation is used to define a method that returns a bean in a Spring configuration class.
+@Value // This annotation is used to inject values from properties files or environment variables into fields in a Spring component.
+@Autowired // This annotation is used to inject dependencies into a Spring component, allowing for automatic dependency injection.
+@Qualifier // This annotation is used to specify which bean to inject when there are multiple candidates for autowiring.
+@Primary   // if their are multiple qualifier this annotation can tell which is the primary one to use
