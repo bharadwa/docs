@@ -1,0 +1,16 @@
+servlet container ---- > dispatcher servlet ---- > spring framework ---- > controller
+// servlet container: Tomcat, Jetty, etc.
+// dispatcher servlet: Front Controller in Spring MVC
+// spring framework: Core, AOP, Data Access, etc.
+// controller: UserController, ProductController, etc.
+// The flow of a request in a Spring MVC application
+// 1. **Client Request**: The client (browser, mobile app, etc.) sends an HTTP request to the server.
+// 2. **Servlet Container**: The request is received by the servlet container (e.g., Tomcat, Jetty), which is responsible for managing servlets.
+// 3. **Dispatcher Servlet**: The servlet container forwards the request to the `DispatcherServlet`, which is the front controller in Spring MVC.
+// 4. **Handler Mapping**: The `DispatcherServlet` uses handler mappings to determine which controller method should handle the request based on the URL and HTTP method.
+// 5. **Controller Method**: The appropriate controller method is invoked, which processes the request and may interact with services or repositories to fetch or manipulate data.
+// 6. **Model and View**: The controller prepares a model (data) and returns a view name (e.g., JSP, Thymeleaf) to the `DispatcherServlet`.
+// 7. **View Resolution**: The `DispatcherServlet` uses a view resolver to resolve the view name to an actual view (e.g., a JSP file).
+// 8. **Render View**: The view is rendered, and the model data is populated into the view.
+// 9. **Response**: The rendered view is sent back to the `DispatcherServlet`, which then sends the HTTP response back to the client.
+// 10. **Client Receives Response**: The client receives the HTTP response and renders the content (e.g., HTML page) in the browser or app.
