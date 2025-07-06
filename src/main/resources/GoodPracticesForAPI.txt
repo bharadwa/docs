@@ -12,3 +12,48 @@ POST -- creating a new resource on the server
 PATCH -- updating a resource partially on the server
 DELETE -- deleting a resource from the server
 no api shouldnt main any data from the previous api and it is called stateless
+each request should maintain the state of each user which is an overhead and not needed in statefull protocols
+
+chatty apis are not recommended at all it requires multiple calls to the server to get the data
+
+RULES for writing REST API
+1. **Use Nouns for Resource Names**: Use nouns to represent resources, not verbs. For example, use `/users` instead of `/getUsers`.
+2. **Use Plural Nouns**: Use plural nouns for resource names to indicate collections. For example, use `/users` instead of `/user`.
+3. **Use HTTP Methods Appropriately**: Use the correct HTTP methods for actions:
+   - `GET` for retrieving resources
+   - `POST` for creating resources
+   - `PUT` for updating resources
+   - `PATCH` for partially updating resources
+   - `DELETE` for deleting resources
+4. **Use Meaningful Resource Names**: Use descriptive names for resources that clearly indicate their purpose. For example, use `/products` instead of `/items`.
+5. **Avoid Using Query Parameters for Actions**: Use query parameters for filtering, sorting, or pagination, not for actions. For example, use `/users?sort=name` instead of `/users/sortByName`.
+6. **Use Versioning**: Include versioning in the API URL to manage changes over time. For example, use `/v1/users` for version 1 of the users API.
+7. **Use Consistent Naming Conventions**: Use consistent naming conventions for resources and endpoints. For example, use camelCase or snake_case consistently across the API.
+8. **Avoid Deep Nesting**: Avoid deep nesting of resources in the URL. For example, use `/users/{userId}/orders` instead of `/users/{userId}/orderDetails`.
+9. **Use Status Codes Appropriately**: Use appropriate HTTP status codes to indicate the result of the API call. For example, use `200 OK` for successful requests, `201 Created` for successful resource creation, and `404 Not Found` for resources that do not exist.
+10. **Document the API**: Provide clear documentation for the API, including endpoints, request/response formats, and examples. This helps developers understand how to use the API effectively.
+// 11. **Use HATEOAS**: Consider using Hypermedia as the Engine of Application State (HATEOAS) to provide links to related resources in the API responses, allowing clients to navigate the API dynamically.
+// 12. **Use Consistent Error Handling**: Implement consistent error handling across the API, returning meaningful error messages and appropriate status codes for different error scenarios.
+// 13. **Use Caching**: Implement caching strategies to improve performance and reduce server load, especially for frequently accessed resources.
+// 14. **Use Security Best Practices**: Implement security measures such as authentication and authorization to protect sensitive resources and data.
+// 15. **Use Rate Limiting**: Implement rate limiting to prevent abuse and ensure fair usage of the API by different clients.
+// 16. **Use Pagination**: Implement pagination for endpoints that return large collections of resources to improve performance and usability.
+// 17. **Use Filtering and Sorting**: Allow clients to filter and sort resources using query parameters to enhance flexibility and usability.
+// 18. **Use Consistent Response Formats**: Use a consistent response format (e.g., JSON or XML) across the API to ensure predictability and ease of use for clients.
+// 19. **Use Compression**: Consider using compression (e.g., GZIP) for API responses to reduce bandwidth usage and improve performance.
+// 20. **Use Asynchronous Processing**: For long-running operations, consider using asynchronous processing with callbacks or webhooks to notify clients when the operation is complete.
+// 21. **Use API Gateways**: Consider using API gateways to manage, secure, and monitor API traffic, providing a single entry point for clients.
+// 22. **Use OpenAPI Specification**: Consider using the OpenAPI Specification (formerly known as Swagger) to define and document the API, making it easier for developers to understand and use.
+// 23. **Use Consistent Versioning Strategy**: Choose a consistent versioning strategy (e.g., URL versioning, header versioning) and stick to it across the API lifecycle.
+// 24. **Use Environment-Specific Configuration**: Use environment-specific configuration for API endpoints, allowing different configurations for development, testing, and production environments.
+// 25. **Use Monitoring and Logging**: Implement monitoring and logging for the API to track usage, performance, and errors, enabling better debugging and maintenance.
+// 26. **Use Content Negotiation**: Implement content negotiation to allow clients to specify the desired response format (e.g., JSON, XML) using the `Accept` header.
+// 27. **Use Rate Limiting**: Implement rate limiting to control the number of requests a client can make within a specific time period, preventing abuse and ensuring fair usage.
+// 28. **Use API Keys or Tokens**: Use API keys or tokens for authentication and authorization, ensuring that only authorized clients can access the API.
+// 29. **Use Cross-Origin Resource Sharing (CORS)**: Implement CORS to allow or restrict access to the API from different origins, enhancing security and flexibility.
+// 30. **Use Consistent Error Codes**: Use consistent error codes across the API to indicate different types of errors, making it easier for clients to handle errors.
+// 31. **Use Rate Limiting**: Implement rate limiting to control the number of requests a client can make within a specific time period, preventing abuse and ensuring fair usage.
+// 32. **Use API Documentation Tools**: Consider using tools like Swagger or Postman to generate and maintain API documentation, making it easier for developers to understand and use the API
+
+// Don't use chatty apis
+// chatty apis are not recommended at all it requires multiple calls to the server to get the data
