@@ -1,0 +1,15 @@
+Generate an SSH key (if you don't have one):
+Open Command Prompt or Git Bash and run:
+ssh-keygen -t ed25519 -C "your_email@example.com"
+Press Enter to accept the default file location.
+Add your SSH key to the ssh-agent:
+eval "$(ssh-agent -s)"
+navigate to users/Administrator/.ssh and run this command
+ssh-add %USERPROFILE%\.ssh\id_ed25519
+Copy your public key:
+type %USERPROFILE%\.ssh\id_ed25519.pub
+Copy the output.
+Go to GitHub > Settings > SSH and GPG keys > New SSH key. Paste your key and save.
+Test your connection:
+ssh -T git@github.com
+
